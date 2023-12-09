@@ -6,9 +6,7 @@ export function Education() {
         degree={"Master of Computer Engineering"}
         university={"SUNY - Stony Brook University"}
         duration={"2023-2025"}
-        content={
-          "Recipient of Computer Science Fellowship &amp; Scholarship. Working as a Research Assistant under Prof. Tao. Previously the Director of IT at IGSA (Indian Graduate Students Association)"
-        }
+        content={""}
         logo={
           "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Stony_Brook_University_seal.svg/800px-Stony_Brook_University_seal.svg.png"
         }
@@ -17,9 +15,7 @@ export function Education() {
         degree={"Bachelor of Technology, Computer Science"}
         university={"NIT Durgapur"}
         duration={"2016-2020"}
-        content={
-          "Ranked top 10% in the program. Head and Memeber of Web Design & Creative Team"
-        }
+        content={"Ranked top 10% in the program."}
         logo={
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSxNCwuM2cjNFHZwomjWF937m09C2R1Xry4L6Z49w8FJW1sesXOjizvzTrFh8kdN6BuY0&usqp=CAU"
         }
@@ -43,7 +39,7 @@ function College(props: Props) {
       <h6 className={"tertiary-text"}>{props.duration}</h6>
       <img
         src={props.logo}
-        alt={"uni-logo"}
+        alt={"uni-logo img-circular"}
         width={150}
         height={150}
         style={{ borderRadius: 100 }}

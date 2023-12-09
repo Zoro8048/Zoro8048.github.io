@@ -6,6 +6,11 @@ li {
   list-style-type: none;
 }
 
+.img-circular {
+  object-fit: contain;
+  background-color: white;
+}
+
 .primary-text {
   color: #90A0D9;
 }

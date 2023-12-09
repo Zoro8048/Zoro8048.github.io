@@ -33,7 +33,7 @@ function Achievement(props: Props) {
       <h6 className={"tertiary-text pb-1"}>{props.duration}</h6>
       <img
         src={props.logo}
-        className={"br-50"}
+        className={"br-50 img-circular"}
         alt={"company-logo"}
         width={80}
         height={80}

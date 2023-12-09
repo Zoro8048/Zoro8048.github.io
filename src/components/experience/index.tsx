@@ -36,7 +36,7 @@ function Company(props: Props) {
       <h3 className={"tertiary-text pb-1"}>{props.company}</h3>
       <img
         src={props.logo}
-        className={"br-50"}
+        className={"br-50 img-circular"}
         alt={"company-logo"}
         width={80}
         height={80}
