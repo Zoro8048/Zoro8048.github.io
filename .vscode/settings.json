@@ -1,0 +1,42 @@
+{
+  "editor.renderWhitespace": "all",
+  "editor.fontSize": 14,
+  "editor.minimap.enabled": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.suggestSelection": "first",
+  "prettier.tabWidth": 2,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "editor.renderControlCharacters": true,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "git.autofetch": true,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.rename.enablePreview": false,
+  "cSpell.words": ["shopify", "svgs", "userid"],
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
