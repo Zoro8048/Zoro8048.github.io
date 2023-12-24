@@ -8,6 +8,10 @@ export const SKILLS = [
   "Typescript",
   "React.js",
   "Next.js",
+  "SQL",
+  "PostgreSQL",
+  "Django",
+  "Flask",
   "React Native",
   "Android",
   "iOS",
@@ -20,5 +24,6 @@ export const SKILLS = [
   "Git",
   "CI / CD",
   "CLEAN Code",
+  "TDD",
   "AWS",
 ];
