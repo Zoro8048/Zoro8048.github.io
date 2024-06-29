@@ -1,7 +1,7 @@
 export const EXPERIENCES = [
   {
     company: "Trial and Error, Inc",
-    logo: "https://media.licdn.com/dms/image/D4E0BAQGoLJ_zHwsChQ/company-logo_200_200/0/1684527604433/trial_and_error_ai_logo?e=1727913600&v=beta&t=CPEa8yiYhALG2uQbTQo6XY7SLZLDN4Rt1utw-t4M0lE",
+    logo: "https://i.postimg.cc/KzFNL09w/image.jpg",
     position: "Software Engineer Intern",
     duration: "June 2024 - Present",
   },
