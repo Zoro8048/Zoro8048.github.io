@@ -3,7 +3,7 @@ export const EXPERIENCES = [
     company: "Trial and Error, Inc",
     logo: "https://i.postimg.cc/KzFNL09w/image.jpg",
     position: "Software Engineer Intern",
-    duration: "June 2024 - Present",
+    duration: "June 2024 - August 2024",
   },
   {
     company: "CARS24",
