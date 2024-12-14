@@ -8,6 +8,14 @@ export function Header() {
         <h3 className={"col primary-text"}>KN.</h3>
         <div className={"col-6 menu-option"} />
         <div className={"col secondary-text menu-option"}>
+          <a
+            href="https://docs.google.com/document/d/16IA_B_VPAjWNEaUJ3oq2SvG7gOAkZznUMn6qKbL9O94/edit?tab=t.0"
+            target={"_blank"}
+          >
+            portfolio
+          </a>
+        </div>
+        <div className={"col secondary-text menu-option"}>
           <a href="#education">education</a>
         </div>
         <div className={"col secondary-text menu-option"}>
