@@ -3,6 +3,16 @@ import React from "react";
 
 const experiences = [
   {
+    id: 0,
+    role: "SDE II",
+    company: "Amazon",
+    period: "Jun. 2025 - Present",
+    description: "",
+    achievements: [],
+    logo: "https://i.postimg.cc/fRTkHZx2/01cada77a0a7d326d85b7969fe26a728.jpg",
+    location: "Seattle, USA",
+  },
+  {
     id: 1,
     role: "Software Engineer Intern",
     company: "Trial and Error, Inc",
