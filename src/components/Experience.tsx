@@ -46,7 +46,7 @@ const experiences = [
     id: 4,
     role: "Mentor",
     company: "The Newton School",
-    period: "Jan. 2022 - Feb. 20222",
+    period: "Jan. 2022 - Feb. 2022",
     description: "",
     achievements: [],
     logo: "https://images.squarespace-cdn.com/content/v1/61f9c6e4cf3bdf202e1ee7d7/5945356e-184a-43a2-b077-cf80d3ddd8f9/newtonschoollogo.jpg",
