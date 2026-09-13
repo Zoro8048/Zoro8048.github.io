@@ -22,6 +22,10 @@ yarn build
 
 Netlify uses `netlify.toml` to build with Node 20 and publish `out/`.
 
+## SEO
+
+The canonical site URL is `https://keerthan.me/`. Next.js generates `/sitemap.xml` and `/robots.txt` during the static export, and the root layout includes Person structured data. Update `src/lib/site.ts` if the primary domain changes.
+
 ## Update portfolio content
 
 The site sections are individual components under `src/components/`. Update the content arrays in `Experience.tsx`, `Education.tsx`, `Achievements.tsx`, and `Skills.tsx` to change portfolio data.
