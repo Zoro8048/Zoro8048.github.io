@@ -10,7 +10,7 @@ const education = [
     period: "2023 - 2025",
     description: "",
     highlights: [],
-    logo: "https://upload.wikimedia.org/wikipedia/en/thumb/1/1d/Stony_Brook_University_seal.svg/800px-Stony_Brook_University_seal.svg.png",
+    logo: "https://imgs.search.brave.com/ybr9LKnWar6I08i1XjDb6naUlX104GfqudJffJNvf6I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/c2FyY2hpdmUuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIy/LzA3L1N0b255LUJy/b29rLVVuaXZlcnNp/dHktbG9nby5wbmc",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const education = [
     period: "2016 - 2020",
     description: "",
     highlights: [],
-    logo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSxNCwuM2cjNFHZwomjWF937m09C2R1Xry4L6Z49w8FJW1sesXOjizvzTrFh8kdN6BuY0&usqp=CAU",
+    logo: "https://imgs.search.brave.com/MG9ZOFgg5t1_jJnpKO_Zn1SyGlLz9eZxg1wmReVPB-8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/Yi53aWtpbWVkaWEu/b3JnL3dpa2lwZWRp/YS9lbi90aHVtYi9m/L2YxL05JVF9EdXJn/YXB1cl9Mb2dvLnN2/Zy8xMjgwcHgtTklU/X0R1cmdhcHVyX0xv/Z28uc3ZnLnBuZz91/dG1fc291cmNlPWVu/Lndpa2lwZWRpYS5v/cmcmYW1wO3V0bV9j/YW1wYWlnbj1pbmRl/eCZhbXA7dXRtX2Nv/bnRlbnQ9dGh1bWJu/YWls",
   },
 ];
 

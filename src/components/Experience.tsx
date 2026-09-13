@@ -7,7 +7,8 @@ const experiences = [
     role: "SDE II",
     company: "Amazon",
     period: "Jun. 2025 - Present",
-    description: "",
+    description:
+      "Building and shipping production software as an SDE II.",
     achievements: [],
     logo: "https://i.postimg.cc/fRTkHZx2/01cada77a0a7d326d85b7969fe26a728.jpg",
     location: "Seattle, USA",
@@ -17,7 +18,8 @@ const experiences = [
     role: "Software Engineer Intern",
     company: "Trial and Error, Inc",
     period: "Jun. 2024 - Aug. 2024",
-    description: "",
+    description:
+      "Shipped product features across a fast-moving startup stack in one summer.",
     achievements: [],
     logo: "https://i.postimg.cc/KzFNL09w/image.jpg",
     location: "Remote, USA",
@@ -27,7 +29,8 @@ const experiences = [
     role: "Software Engineer",
     company: "CARS24",
     period: "Oct. 2021 - Aug. 2023",
-    description: "",
+    description:
+      "Improved a business-critical screen by ~40% and shipped one internal app across 4 markets (IN, UAE, ID & TH).",
     achievements: [],
     logo: "https://fastly-production.24c.in/cars24/seo/static/1_20230830_1693395013.png",
     location: "Bangalore, India",
@@ -37,7 +40,8 @@ const experiences = [
     role: "Software Development Engineer I",
     company: "NeoGrowth Credit Pvt. Ltd.",
     period: "Nov. 2020 - Oct. 2021",
-    description: "",
+    description:
+      "Owned frontend development, deployment, and maintenance of DiGibizz — youngest Employee of the Month at the time.",
     achievements: [],
     logo: "https://neogrowth.in/images/logo/logo_new.svg",
     location: "Bangalore, India",
@@ -47,7 +51,8 @@ const experiences = [
     role: "Mentor",
     company: "The Newton School",
     period: "Jan. 2022 - Feb. 2022",
-    description: "",
+    description:
+      "Mentored engineers on production-quality code and practical problem solving.",
     achievements: [],
     logo: "https://images.squarespace-cdn.com/content/v1/61f9c6e4cf3bdf202e1ee7d7/5945356e-184a-43a2-b077-cf80d3ddd8f9/newtonschoollogo.jpg",
     location: "Remote, India",
@@ -57,7 +62,8 @@ const experiences = [
     role: "React Native Developer Intern",
     company: "Apnicart",
     period: "Jun. 2020 - Jul. 2021",
-    description: "",
+    description:
+      "Built and shipped React Native features in a production mobile app.",
     achievements: [],
     logo: "https://creditdirect.seamlesshiring.com/img/company.png",
     location: "Remote, India",
@@ -67,7 +73,8 @@ const experiences = [
     role: "React Native Developer Intern",
     company: "Bolndwaves",
     period: "May 2020 - Jun. 2020",
-    description: "",
+    description:
+      "Delivered React Native UI and features in a short, high-tempo internship.",
     achievements: [],
     logo: "https://creditdirect.seamlesshiring.com/img/company.png",
     location: "Remote, India",
@@ -77,7 +84,8 @@ const experiences = [
     role: "Android Developer Intern",
     company: "The Sparks Foundation",
     period: "May 2019 - Jun. 2019",
-    description: "",
+    description:
+      "Built native Android features and shipped a working internship project.",
     achievements: [],
     logo: "https://www.thesparksfoundationsingapore.org/images/logo_small.png",
     location: "Remote, India",
@@ -136,7 +144,7 @@ const Experience: React.FC = () => {
 
                     <div className="mt-4 flex-grow">
                       {exp.description && (
-                        <p className="text-sm md:text-base text-gray-600 dark:text-gray-300">
+                        <p className="text-sm md:text-base font-medium text-gray-700 dark:text-gray-200 leading-relaxed">
                           {exp.description}
                         </p>
                       )}
