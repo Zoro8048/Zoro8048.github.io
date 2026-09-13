@@ -18,7 +18,9 @@ yarn test
 yarn build
 ```
 
-`yarn build` produces the deployable Next.js application in `.next/`.
+`yarn build` produces the deployable static site in `out/`.
+
+Netlify uses `netlify.toml` to build with Node 20 and publish `out/`.
 
 ## Update portfolio content
 
