@@ -45,6 +45,7 @@ const Hero: React.FC = () => {
           <a
             href="#about"
             className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm text-gray-800 dark:text-white hover:bg-white/70 dark:hover:bg-slate-800/70 transition-colors animate-bounce mt-8 shadow-sm"
+            aria-label="Scroll to About Me"
           >
             <ArrowDown size={20} />
           </a>

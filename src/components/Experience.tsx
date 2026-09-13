@@ -1,3 +1,5 @@
+"use client";
+
 import { Briefcase, MapPin } from "lucide-react";
 import React from "react";
 
@@ -109,7 +111,7 @@ const Experience: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {experiences.map((exp, index) => (
+            {experiences.map((exp) => (
               <div key={exp.id} className="relative">
                 <div className="backdrop-blur-lg bg-white/30 dark:bg-slate-800/30 rounded-xl p-4 md:p-6 border border-gray-200 dark:border-gray-700 shadow-glass transition-all duration-300 hover:-translate-y-1 hover:shadow-xl h-full">
                   <div className="flex flex-col h-full">
@@ -119,10 +121,11 @@ const Experience: React.FC = () => {
                           src={exp.logo}
                           alt={`${exp.company} logo`}
                           className="w-full h-full object-contain"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement;
-                            target.src = "/images/placeholder-company.png";
-                          }}
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.onerror = null;
+                          target.src = "/images/placeholder-logo.svg";
+                        }}
                         />
                       </div>
 

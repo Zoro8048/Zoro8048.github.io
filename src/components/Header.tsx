@@ -1,3 +1,5 @@
+"use client";
+
 import { Menu, X } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import ThemeToggle from "./ThemeToggle";
@@ -80,6 +82,9 @@ const Header: React.FC = () => {
           <button
             onClick={toggleMenu}
             className="text-gray-700 dark:text-gray-300 focus:outline-none"
+            aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={isOpen}
+            aria-controls="mobile-navigation"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -88,7 +93,10 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg">
+        <div
+          id="mobile-navigation"
+          className="md:hidden bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg"
+        >
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a
               href="#about"

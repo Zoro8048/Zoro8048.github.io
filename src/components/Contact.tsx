@@ -46,6 +46,7 @@ const Contact: React.FC = () => {
                       target="_blank"
                       rel="noreferrer"
                       className="p-2 bg-gray-200 dark:bg-slate-700 rounded-full text-gray-700 dark:text-gray-300 hover:bg-indigo-500 hover:text-white dark:hover:bg-indigo-600 transition-colors"
+                      aria-label="Visit Keerthan Nandigama on LinkedIn"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from 'react';
 import { Moon, Sun } from 'lucide-react';
 
@@ -5,18 +7,17 @@ const ThemeToggle: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
-    // Check for dark mode preference
-    if (
-      localStorage.theme === 'dark' ||
-      (!('theme' in localStorage) &&
-        window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      setDarkMode(true);
-      document.documentElement.classList.add('dark');
-    } else {
-      setDarkMode(false);
-      document.documentElement.classList.remove('dark');
-    }
+    const animationFrame = window.requestAnimationFrame(() => {
+      const useDarkMode =
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+      setDarkMode(useDarkMode);
+      document.documentElement.classList.toggle('dark', useDarkMode);
+    });
+
+    return () => window.cancelAnimationFrame(animationFrame);
   }, []);
 
   const toggleTheme = () => {

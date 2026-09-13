@@ -1,3 +1,5 @@
+"use client";
+
 import { Trophy } from "lucide-react";
 import React from "react";
 
@@ -71,7 +73,8 @@ const Achievements: React.FC = () => {
                         className="w-full h-full object-contain"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
-                          target.src = "/images/placeholder-achievement.png";
+                          target.onerror = null;
+                          target.src = "/images/placeholder-logo.svg";
                         }}
                       />
                     </div>

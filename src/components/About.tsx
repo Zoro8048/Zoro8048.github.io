@@ -16,10 +16,10 @@ const About: React.FC = () => {
             <div className="flex flex-col lg:flex-row gap-10 items-center">
               <div className="w-full">
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                  I'm Keerthan Nandigama, a Software Engineer with a strong
+                  I&apos;m Keerthan Nandigama, a Software Engineer with a strong
                   track record of building scalable, user-centric applications
                   across mobile and web platforms. With a background in Computer
-                  Science and a Master's in Computer Engineering from Stony
+                  Science and a Master&apos;s in Computer Engineering from Stony
                   Brook University, I bring a blend of deep technical knowledge
                   and practical industry experience.
                 </p>
@@ -27,8 +27,8 @@ const About: React.FC = () => {
                   Previously, I contributed to high-impact applications at
                   CARS24 and NeoGrowth, leading cross-functional initiatives
                   that improved performance, scalability, and user engagement.
-                  I'm passionate about clean architecture, analytics-driven
-                  development, and optimizing performance at scale. Whether it's
+                  I&apos;m passionate about clean architecture, analytics-driven
+                  development, and optimizing performance at scale. Whether it&apos;s
                   React Native, Flutter, Spring Boot, or full-stack web
                   development, I enjoy delivering robust solutions that make a
                   difference.

@@ -1,3 +1,5 @@
+"use client";
+
 import { GraduationCap, MapPin } from "lucide-react";
 import React from "react";
 
@@ -55,7 +57,8 @@ const Education: React.FC = () => {
                         className="w-full h-full object-contain"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
-                          target.src = "/images/placeholder-education.png";
+                          target.onerror = null;
+                          target.src = "/images/placeholder-logo.svg";
                         }}
                       />
                     </div>
