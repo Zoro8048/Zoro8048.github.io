@@ -3,7 +3,14 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="py-10 border-t border-slate-200/80 dark:border-slate-800/80 bg-white/50 dark:bg-[#0b0d13]">
+    <footer
+      className="pt-10 pb-10 border-t border-slate-200/80 dark:border-slate-800/80 bg-white/50 dark:bg-[#0b0d13]"
+      style={{
+        paddingBottom: "max(2.5rem, calc(1.5rem + env(safe-area-inset-bottom, 0px)))",
+        paddingLeft: "max(1rem, env(safe-area-inset-left, 0px))",
+        paddingRight: "max(1rem, env(safe-area-inset-right, 0px))",
+      }}
+    >
       <div className="container mx-auto">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">

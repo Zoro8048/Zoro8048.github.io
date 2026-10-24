@@ -30,7 +30,14 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 px-4 pt-3 sm:pt-4 pointer-events-none">
+    <header
+      className="fixed top-0 left-0 w-full z-50 px-4 pointer-events-none"
+      style={{
+        paddingTop: "max(0.75rem, calc(0.5rem + env(safe-area-inset-top, 0px)))",
+        paddingLeft: "max(1rem, env(safe-area-inset-left, 0px))",
+        paddingRight: "max(1rem, env(safe-area-inset-right, 0px))",
+      }}
+    >
       <div className="container mx-auto">
         <div
           className={`pointer-events-auto flex items-center justify-between px-4 py-2.5 rounded-2xl transition-all duration-300 border ${

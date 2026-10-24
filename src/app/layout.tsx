@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import { siteUrl } from "../lib/site";
@@ -16,6 +16,15 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+export const viewport: Viewport = {
+  themeColor: "#0b0d13",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
+};
+
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: {
@@ -29,6 +38,11 @@ export const metadata: Metadata = {
   creator: "Keerthan Nandigama",
   publisher: "Keerthan Nandigama",
   manifest: "/manifest.json",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "Keerthan Nandigama",
+  },
   robots: {
     index: true,
     follow: true,
