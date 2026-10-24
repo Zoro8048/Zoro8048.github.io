@@ -227,133 +227,44 @@ const Experience: React.FC = () => {
           </div>
         </div>
 
-        {/* Full-Time Split-Rail Ledger */}
-        {(filter === "all" || filter === "full-time") && (
-          <div className="space-y-4 mb-8">
-            {fullTimeRoles.map((exp) => (
-              <div
-                key={exp.id}
-                className={`bento-card p-6 sm:p-8 ${
-                  exp.current
-                    ? "border-blue-500/50 dark:border-blue-400/40"
-                    : "bento-card-hover"
-                }`}
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                  {/* Left Metadata Rail (4 cols) */}
-                  <div className="lg:col-span-4 flex flex-col justify-between lg:border-r border-slate-200/80 dark:border-slate-800/80 lg:pr-6">
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <span
-                          className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${
-                            exp.current
-                              ? "bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/30 font-semibold"
-                              : "bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400"
-                          }`}
-                        >
-                          {exp.current ? "Current Role · Full-Time" : exp.typeLabel}
-                        </span>
-                        <span className="font-mono text-xs text-slate-500 dark:text-slate-400">
-                          {exp.tenure}
-                        </span>
-                      </div>
-
-                      <div className="flex items-center gap-3.5 mb-3">
-                        <div className="w-12 h-12 rounded-xl bg-white p-1.5 border border-slate-200 dark:border-slate-700 shrink-0 flex items-center justify-center">
-                          <img
-                            src={exp.logo}
-                            alt={`${exp.company} logo`}
-                            className="w-full h-full object-contain"
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.onerror = null;
-                              target.src = "/images/placeholder-logo.svg";
-                            }}
-                          />
-                        </div>
-                        <div>
-                          <div className="text-lg font-bold text-slate-900 dark:text-slate-100">
-                            {exp.company}
-                          </div>
-                          <div className="inline-flex items-center text-xs text-slate-500 dark:text-slate-400">
-                            <MapPin className="w-3 h-3 mr-1 text-blue-600 dark:text-blue-400" />
-                            {exp.location}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="pt-3 border-t border-slate-100 dark:border-slate-800/60 font-mono text-xs text-slate-500 dark:text-slate-400">
-                      {exp.period}
-                    </div>
-                  </div>
-
-                  {/* Right Engineering Impact Content (8 cols) */}
-                  <div className="lg:col-span-8 flex flex-col justify-between">
-                    <div>
-                      <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-50 mb-2">
-                        {exp.role}
-                      </h3>
-                      <p className="text-sm sm:text-base font-medium text-slate-700 dark:text-slate-300 mb-4 leading-relaxed">
-                        {exp.summary}
-                      </p>
-
-                      {exp.achievements.length > 0 && (
-                        <ul className="space-y-2.5 mb-5">
-                          {exp.achievements.map((item, idx) => (
-                            <li
-                              key={idx}
-                              className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-300 leading-relaxed"
-                            >
-                              <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-400 mt-2 shrink-0" />
-                              <span>{item}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-
-                    <div className="pt-4 border-t border-slate-200/70 dark:border-slate-800/80 flex flex-wrap gap-1.5">
-                      {exp.tech.map((tag) => (
-                        <span
-                          key={tag}
-                          className="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-slate-700 dark:text-slate-300"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* Compact Bento Grid for Internships & Mentorship */}
-        {(filter === "all" || filter === "internship-mentorship") && (
-          <div>
-            {filter === "all" && (
-              <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3 px-1">
-                Early Career, Internships &amp; Mentorship
-              </div>
-            )}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {earlyCareerRoles.map((exp) => (
-                <div
-                  key={exp.id}
-                  className="bento-card bento-card-hover p-5 flex flex-col justify-between"
-                >
+        {/* Full-Time Split-Rail Ledger (Always rendered in DOM for SEO crawlers) */}
+        <div
+          className={
+            filter === "all" || filter === "full-time"
+              ? "space-y-4 mb-8"
+              : "hidden"
+          }
+        >
+          {fullTimeRoles.map((exp) => (
+            <div
+              key={exp.id}
+              className={`bento-card p-6 sm:p-8 ${
+                exp.current
+                  ? "border-blue-500/50 dark:border-blue-400/40"
+                  : "bento-card-hover"
+              }`}
+            >
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                {/* Left Metadata Rail (4 cols) */}
+                <div className="lg:col-span-4 flex flex-col justify-between lg:border-r border-slate-200/80 dark:border-slate-800/80 lg:pr-6">
                   <div>
-                    <div className="flex items-center justify-between text-xs text-slate-400 dark:text-slate-500 mb-3">
-                      <span className="font-medium text-slate-500 dark:text-slate-400">
-                        {exp.typeLabel}
+                    <div className="flex items-center justify-between mb-4">
+                      <span
+                        className={`text-xs px-2.5 py-0.5 rounded-full font-medium ${
+                          exp.current
+                            ? "bg-blue-500/15 text-blue-600 dark:text-blue-400 border border-blue-500/30 font-semibold"
+                            : "bg-slate-100 dark:bg-slate-800/80 text-slate-600 dark:text-slate-400"
+                        }`}
+                      >
+                        {exp.current ? "Current Role · Full-Time" : exp.typeLabel}
                       </span>
-                      <span className="font-mono">{exp.period}</span>
+                      <span className="font-mono text-xs text-slate-500 dark:text-slate-400">
+                        {exp.tenure}
+                      </span>
                     </div>
 
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-10 h-10 rounded-lg bg-white p-1.5 border border-slate-200 dark:border-slate-700 shrink-0 flex items-center justify-center">
+                    <div className="flex items-center gap-3.5 mb-3">
+                      <div className="w-12 h-12 rounded-xl bg-white p-1.5 border border-slate-200 dark:border-slate-700 shrink-0 flex items-center justify-center">
                         <img
                           src={exp.logo}
                           alt={`${exp.company} logo`}
@@ -366,35 +277,132 @@ const Experience: React.FC = () => {
                         />
                       </div>
                       <div>
-                        <h4 className="font-bold text-base text-slate-900 dark:text-slate-100 leading-tight">
-                          {exp.role}
-                        </h4>
-                        <div className="text-xs font-medium text-blue-600 dark:text-blue-400">
-                          {exp.company} · {exp.location}
+                        <div className="text-lg font-bold text-slate-900 dark:text-slate-100">
+                          {exp.company}
+                        </div>
+                        <div className="inline-flex items-center text-xs text-slate-500 dark:text-slate-400">
+                          <MapPin className="w-3 h-3 mr-1 text-blue-600 dark:text-blue-400" />
+                          {exp.location}
                         </div>
                       </div>
                     </div>
-
-                    <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
-                      {exp.summary}
-                    </p>
                   </div>
 
-                  <div className="pt-3 border-t border-slate-200/60 dark:border-slate-800/70 flex flex-wrap gap-1.5">
+                  <div className="pt-3 border-t border-slate-100 dark:border-slate-800/60 font-mono text-xs text-slate-500 dark:text-slate-400">
+                    {exp.period}
+                  </div>
+                </div>
+
+                {/* Right Engineering Impact Content (8 cols) */}
+                <div className="lg:col-span-8 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-slate-50 mb-2">
+                      {exp.role}
+                    </h3>
+                    <p className="text-sm sm:text-base font-medium text-slate-700 dark:text-slate-300 mb-4 leading-relaxed">
+                      {exp.summary}
+                    </p>
+
+                    {exp.achievements.length > 0 && (
+                      <ul className="space-y-2.5 mb-5">
+                        {exp.achievements.map((item, idx) => (
+                          <li
+                            key={idx}
+                            className="flex items-start gap-3 text-sm text-slate-600 dark:text-slate-300 leading-relaxed"
+                          >
+                            <span className="w-1.5 h-1.5 rounded-full bg-blue-600 dark:bg-blue-400 mt-2 shrink-0" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+
+                  <div className="pt-4 border-t border-slate-200/70 dark:border-slate-800/80 flex flex-wrap gap-1.5">
                     {exp.tech.map((tag) => (
                       <span
                         key={tag}
-                        className="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400"
+                        className="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 text-slate-700 dark:text-slate-300"
                       >
                         {tag}
                       </span>
                     ))}
                   </div>
                 </div>
-              ))}
+              </div>
             </div>
+          ))}
+        </div>
+
+        {/* Compact Bento Grid for Internships & Mentorship (Always rendered in DOM for SEO crawlers) */}
+        <div
+          className={
+            filter === "all" || filter === "internship-mentorship"
+              ? "block"
+              : "hidden"
+          }
+        >
+          {filter === "all" && (
+            <div className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3 px-1">
+              Early Career, Internships &amp; Mentorship
+            </div>
+          )}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {earlyCareerRoles.map((exp) => (
+              <div
+                key={exp.id}
+                className="bento-card bento-card-hover p-5 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between text-xs text-slate-400 dark:text-slate-500 mb-3">
+                    <span className="font-medium text-slate-500 dark:text-slate-400">
+                      {exp.typeLabel}
+                    </span>
+                    <span className="font-mono">{exp.period}</span>
+                  </div>
+
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 rounded-lg bg-white p-1.5 border border-slate-200 dark:border-slate-700 shrink-0 flex items-center justify-center">
+                      <img
+                        src={exp.logo}
+                        alt={`${exp.company} logo`}
+                        className="w-full h-full object-contain"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement;
+                          target.onerror = null;
+                          target.src = "/images/placeholder-logo.svg";
+                        }}
+                      />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-base text-slate-900 dark:text-slate-100 leading-tight">
+                        {exp.role}
+                      </h4>
+                      <div className="text-xs font-medium text-blue-600 dark:text-blue-400">
+                        {exp.company} · {exp.location}
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-4">
+                    {exp.summary}
+                  </p>
+                </div>
+
+                <div className="pt-3 border-t border-slate-200/60 dark:border-slate-800/70 flex flex-wrap gap-1.5">
+                  {exp.tech.map((tag) => (
+                    <span
+                      key={tag}
+                      className="px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
-        )}
+        </div>
       </div>
     </section>
   );

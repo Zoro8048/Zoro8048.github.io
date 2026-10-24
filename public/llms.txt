@@ -1,0 +1,37 @@
+# Keerthan Nandigama
+
+> Software Development Engineer II (SDE II) at Amazon in Seattle, WA. Building scalable backend distributed systems on AWS and customer-focused software products.
+
+- Canonical URL: https://keerthan.me
+- Location: Seattle, WA, USA
+- Current Role: Software Development Engineer II (SDE II) at Amazon (Jun 2025 - Present)
+- Education:
+  - Master of Science in Computer Engineering, Stony Brook University (SUNY), New York (2023 - 2025)
+  - Bachelor of Technology in Computer Science & Engineering, NIT Durgapur, India (2016 - 2020)
+- Links:
+  - LinkedIn: https://www.linkedin.com/in/keerthan-nandigama-b3b19b175/
+  - GitHub: https://github.com/zoro8048
+  - Portfolio & Case Studies: https://docs.google.com/document/d/16IA_B_VPAjWNEaUJ3oq2SvG7gOAkZznUMn6qKbL9O94/edit?tab=t.0
+
+## Work Experience
+
+- **Amazon** | Software Development Engineer II (SDE II) | Jun 2025 - Present | Seattle, WA
+  - Architecting, building, and operating backend distributed systems on AWS and internal infrastructure that deliver direct value to customers in production.
+  - Owning the end-to-end service lifecycle from technical design and API architecture to automated CI/CD pipelines, telemetry, and operational excellence.
+- **CARS24** | Software Engineer | Oct 2021 - Aug 2023 | Bangalore, India
+  - Engineered a ~40% performance improvement on a business-critical workflow screen (Awarded Innovator of the Month, Jan 2023).
+  - Architected and shipped a unified multi-geography internal application across 4 countries: India, UAE, Indonesia, and Thailand (Awarded Best Coder of the Month, Sep 2022).
+  - Awarded Rookie of the Quarter - Tech (2021 - 2022).
+- **NeoGrowth Credit Pvt. Ltd.** | Software Development Engineer I | Nov 2020 - Oct 2021 | Bangalore, India
+  - Spearheaded frontend architecture, deployment, and maintenance of the flagship DiGibizz merchant lending platform.
+  - Awarded Employee of the Month (Mar 2021), youngest recipient in company history.
+- **Trial and Error, Inc** | Software Engineer Intern | Jun 2024 - Aug 2024 | Remote, USA
+  - Shipped full-stack product features across a fast-moving startup stack during Master's studies at Stony Brook.
+- **The Newton School** | Software Engineering Mentor | Jan 2022 - Feb 2022 | Remote
+
+## Technical Skills
+
+- **Backend & Cloud:** AWS, Distributed Systems, Backend Architecture, Spring Boot, Node.js, Express.js, PostgreSQL, SQL, Ruby on Rails, Django, Flask, Firebase
+- **Languages:** Java, TypeScript, JavaScript (ES6+), Python, Swift, Kotlin, C++, C, HTML5/CSS3
+- **Engineering Practices:** CI/CD Automation, Production Monitoring & Telemetry, Performance Optimization, Clean Architecture, Test-Driven Development (TDD), Multi-Geography Systems
+- **Web & Mobile:** React.js, Next.js, React Native, SwiftUI, iOS, Jetpack Compose, Android, Flutter, Tailwind CSS

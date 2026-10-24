@@ -56,4 +56,5 @@ All portfolio sections are modular components under `src/components/`:
 | **Education** | `src/components/Education.tsx` | `education` array and university logos in `public/images/` |
 | **Contact & Links** | `src/components/Contact.tsx` | LinkedIn, GitHub, Resume doc link, and embedded Tally form |
 | **Command Palette (`⌘K`)** | `src/components/CommandPalette.tsx` | Quick-jump navigation items and external links |
-| **SEO & Metadata** | `src/app/layout.tsx` & `src/lib/site.ts` | Canonical domain, page title/description, and JSON-LD `Person` schema |
+| **SEO & Metadata** | `src/app/layout.tsx` & `src/lib/site.ts` | Canonical domain, page title/description, and JSON-LD `ProfilePage` schema |
+| **AI & Crawler Summary** | `public/llms.txt` | Plain-text Markdown profile for AI search engines and recruiting sourcers |
