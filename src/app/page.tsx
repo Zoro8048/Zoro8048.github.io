@@ -1,5 +1,6 @@
 import About from "../components/About";
 import Achievements from "../components/Achievements";
+import CommandPalette from "../components/CommandPalette";
 import Contact from "../components/Contact";
 import Education from "../components/Education";
 import Experience from "../components/Experience";
@@ -10,22 +11,23 @@ import Skills from "../components/Skills";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50 text-gray-800 dark:from-slate-950 dark:via-slate-900 dark:to-indigo-950 dark:text-white relative overflow-hidden">
-      <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute -top-40 -right-40 w-72 md:w-96 h-72 md:h-96 bg-blue-400/20 dark:bg-blue-600/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/3 -left-40 w-72 md:w-96 h-72 md:h-96 bg-purple-400/20 dark:bg-purple-600/10 rounded-full blur-3xl" />
-        <div className="absolute top-2/3 -right-40 w-72 md:w-96 h-72 md:h-96 bg-indigo-400/20 dark:bg-indigo-600/10 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-72 md:w-96 h-72 md:h-96 bg-teal-400/20 dark:bg-teal-600/10 rounded-full blur-3xl" />
-      </div>
+    <div className="min-h-screen bg-[#faf9f6] dark:bg-[#0b0d13] text-slate-900 dark:text-slate-100 relative overflow-hidden bg-subtle-grid">
+      {/* Soft top radial ambient light */}
+      <div
+        className="fixed inset-x-0 top-0 h-[36rem] pointer-events-none bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(37,99,235,0.07),transparent)] dark:bg-[radial-gradient(ellipse_70%_50%_at_50%_-15%,rgba(59,130,246,0.12),transparent)]"
+        aria-hidden="true"
+      />
+
+      <CommandPalette />
 
       <div className="relative z-10">
         <Header />
         <main>
           <Hero />
-          <About />
-          <Skills />
           <Experience />
           <Achievements />
+          <Skills />
+          <About />
           <Education />
           <Contact />
         </main>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="24" fill="#990000"/>
+  <path d="M60 18L70 42L96 42L75 57L83 82L60 67L37 82L45 57L24 42L50 42L60 18Z" fill="#FFFFFF" fill-opacity="0.18"/>
+  <text x="60" y="72" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-weight="800" font-size="36" letter-spacing="1">SBU</text>
+  <text x="60" y="94" text-anchor="middle" fill="#FCA5A5" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="11" letter-spacing="1.5">STONY BROOK</text>
+</svg>

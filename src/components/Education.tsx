@@ -6,51 +6,62 @@ import React from "react";
 const education = [
   {
     id: 1,
-    degree: "Master of Computer Engineering",
-    institution: "Stony Brook University",
+    degree: "Master of Science in Computer Engineering",
+    institution: "Stony Brook University (SUNY)",
     location: "New York, USA",
     period: "2023 - 2025",
-    description: "",
-    highlights: [],
-    logo: "https://imgs.search.brave.com/ybr9LKnWar6I08i1XjDb6naUlX104GfqudJffJNvf6I/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9sb2dv/c2FyY2hpdmUuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIy/LzA3L1N0b255LUJy/b29rLVVuaXZlcnNp/dHktbG9nby5wbmc",
+    description:
+      "Graduate coursework and research focused on distributed systems, cloud computing, machine learning, and scalable software architecture.",
+    tags: [
+      "Distributed Systems",
+      "Cloud Computing",
+      "Machine Learning & NLP",
+      "Advanced Algorithms",
+    ],
+    logo: "/images/stony-brook.svg",
   },
   {
     id: 2,
-    degree: "Bachelor of Computer Science and Engineering",
-    institution: "NIT Durgapur",
+    degree: "Bachelor of Technology in Computer Science & Engineering",
+    institution: "National Institute of Technology (NIT) Durgapur",
     location: "West Bengal, India",
     period: "2016 - 2020",
-    description: "",
-    highlights: [],
-    logo: "https://imgs.search.brave.com/MG9ZOFgg5t1_jJnpKO_Zn1SyGlLz9eZxg1wmReVPB-8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/Yi53aWtpbWVkaWEu/b3JnL3dpa2lwZWRp/YS9lbi90aHVtYi9m/L2YxL05JVF9EdXJn/YXB1cl9Mb2dvLnN2/Zy8xMjgwcHgtTklU/X0R1cmdhcHVyX0xv/Z28uc3ZnLnBuZz91/dG1fc291cmNlPWVu/Lndpa2lwZWRpYS5v/cmcmYW1wO3V0bV9j/YW1wYWlnbj1pbmRl/eCZhbXA7dXRtX2Nv/bnRlbnQ9dGh1bWJu/YWls",
+    description:
+      "Strong foundation in computer science fundamentals, data structures, operating systems, database management, and full-stack software engineering.",
+    tags: [
+      "Data Structures & Algorithms",
+      "Operating Systems",
+      "DBMS",
+      "Software Engineering",
+    ],
+    logo: "/images/nit-durgapur.svg",
   },
 ];
 
 const Education: React.FC = () => {
   return (
-    <section id="education" className="py-12 md:py-20 relative">
-      <div className="absolute inset-0 bg-gradient-to-tr from-white via-purple-50/50 to-indigo-50/50 dark:from-slate-950 dark:via-purple-900/20 dark:to-slate-900 -z-10"></div>
-
-      <div className="container">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex items-center justify-center mb-8 md:mb-12">
-            <div className="bg-purple-100 dark:bg-purple-900/30 p-2 md:p-3 rounded-xl">
-              <GraduationCap className="w-6 h-6 md:w-8 md:h-8 text-purple-600 dark:text-purple-400" />
-            </div>
-            <h2 className="text-2xl md:text-4xl font-bold ml-3 md:ml-4 text-gray-800 dark:text-white">
-              Educational Background
-            </h2>
+    <section id="education" className="py-12 md:py-20">
+      <div className="container mx-auto">
+        <div className="mb-8 pb-6 border-b border-slate-200/80 dark:border-slate-800/80">
+          <div className="section-eyebrow mb-3">
+            <GraduationCap className="w-3.5 h-3.5" />
+            <span>Academic Background</span>
           </div>
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-slate-50 tracking-tight">
+            Education
+          </h2>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {education.map((edu) => (
-              <div
-                key={edu.id}
-                className="backdrop-blur-lg bg-white/40 dark:bg-slate-800/40 rounded-xl p-4 md:p-6 border border-gray-200/50 dark:border-gray-700/50 shadow-glass transition-all duration-300 hover:-translate-y-1 hover:shadow-xl h-full"
-              >
-                <div className="flex flex-col h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {education.map((edu) => (
+            <div
+              key={edu.id}
+              className="bento-card bento-card-hover p-6 sm:p-7 flex flex-col justify-between"
+            >
+              <div>
+                <div className="flex items-start justify-between gap-4 mb-4">
                   <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-xl bg-white dark:bg-slate-700 p-2 shadow-md">
+                    <div className="w-12 h-12 rounded-xl bg-white p-1.5 border border-slate-200 dark:border-slate-700 shrink-0 flex items-center justify-center">
                       <img
                         src={edu.logo}
                         alt={`${edu.institution} logo`}
@@ -62,53 +73,41 @@ const Education: React.FC = () => {
                         }}
                       />
                     </div>
-
-                    <div className="flex-grow">
-                      <div className="flex flex-col">
-                        <h3 className="text-lg md:text-xl font-semibold text-gray-800 dark:text-white">
-                          {edu.degree}
-                        </h3>
-                        <p className="text-purple-600 dark:text-purple-400 font-medium">
-                          {edu.institution}
-                        </p>
-                        <div className="flex items-center mt-1 text-sm text-gray-600 dark:text-gray-400">
-                          <MapPin className="w-4 h-4 mr-1" />
-                          <span>{edu.location}</span>
-                        </div>
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-bold text-slate-900 dark:text-slate-100 leading-snug">
+                        {edu.degree}
+                      </h3>
+                      <div className="text-sm font-semibold text-blue-600 dark:text-blue-400 mt-0.5">
+                        {edu.institution}
+                      </div>
+                      <div className="inline-flex items-center text-xs text-slate-500 mt-1">
+                        <MapPin className="w-3 h-3 mr-1" />
+                        {edu.location}
                       </div>
                     </div>
                   </div>
-
-                  <div className="mt-4 flex-grow">
-                    {edu.description && (
-                      <p className="text-sm md:text-base text-gray-600 dark:text-gray-300">
-                        {edu.description}
-                      </p>
-                    )}
-
-                    {edu.highlights.length > 0 && (
-                      <div className="space-y-2 mt-4">
-                        {edu.highlights.map((highlight, index) => (
-                          <div key={index} className="flex items-start">
-                            <div className="w-1.5 h-1.5 rounded-full bg-purple-500 dark:bg-purple-400 mr-2 mt-1.5"></div>
-                            <p className="text-sm md:text-base text-gray-700 dark:text-gray-300">
-                              {highlight}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700">
-                    <span className="text-sm font-medium text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-700/50 px-3 py-1 rounded-full">
-                      {edu.period}
-                    </span>
-                  </div>
+                  <span className="font-mono text-xs text-slate-500 dark:text-slate-400 shrink-0">
+                    {edu.period}
+                  </span>
                 </div>
+
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  {edu.description}
+                </p>
               </div>
-            ))}
-          </div>
+
+              <div className="mt-5 pt-4 border-t border-slate-200/70 dark:border-slate-800/80 flex flex-wrap gap-1.5">
+                {edu.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2.5 py-1 rounded-md text-xs font-mono bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
