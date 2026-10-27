@@ -9,6 +9,7 @@ import {
   GraduationCap,
   MessageSquare,
   Search,
+  Sparkles,
   User,
   X,
 } from "lucide-react";
@@ -59,6 +60,14 @@ const commands: CommandItem[] = [
     category: "Recruiter Actions",
     icon: MessageSquare,
     href: "#contact",
+  },
+  {
+    id: "3d-universe",
+    label: "Launch 3D Portfolio Universe (Three.js WebGL)",
+    sublabel: "Interactive 3D orbit, AWS nodes, soundscapes & telemetry",
+    category: "Navigate",
+    icon: Sparkles,
+    href: "/3d",
   },
   {
     id: "exp",

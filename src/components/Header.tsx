@@ -1,6 +1,7 @@
 "use client";
 
-import { ArrowUpRight, Command, Menu, X } from "lucide-react";
+import { ArrowUpRight, Command, Menu, Sparkles, X } from "lucide-react";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 
@@ -94,6 +95,18 @@ const Header: React.FC = () => {
               <kbd className="font-mono text-[11px]">⌘K</kbd>
             </button>
 
+            <Link
+              href="/3d"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-indigo-500/30 bg-gradient-to-r from-blue-600/10 via-indigo-600/10 to-violet-600/10 hover:from-blue-600/20 hover:to-violet-600/20 text-xs font-semibold text-blue-600 dark:text-blue-400 transition-all shadow-sm group"
+              title="Experience 3D Portfolio Universe with Three.js"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-indigo-500 group-hover:rotate-12 transition-transform" />
+              <span>3D View</span>
+              <span className="text-[10px] font-mono px-1 py-0.2 rounded bg-blue-500/15 border border-blue-500/20 font-bold">
+                3js
+              </span>
+            </Link>
+
             <a
               href="https://docs.google.com/document/d/16IA_B_VPAjWNEaUJ3oq2SvG7gOAkZznUMn6qKbL9O94/edit?tab=t.0"
               target="_blank"
@@ -149,6 +162,19 @@ const Header: React.FC = () => {
                   {item.label}
                 </a>
               ))}
+              <Link
+                href="/3d"
+                onClick={() => setIsOpen(false)}
+                className="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-semibold bg-gradient-to-r from-blue-600/15 via-indigo-600/15 to-violet-600/15 text-blue-600 dark:text-blue-400 border border-blue-500/25 mt-1"
+              >
+                <span className="flex items-center gap-2">
+                  <Sparkles className="w-4 h-4 text-indigo-500" />
+                  <span>Interactive 3D Universe</span>
+                </span>
+                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-blue-500/20 font-bold">
+                  Three.js
+                </span>
+              </Link>
               <div className="pt-3 mt-2 border-t border-slate-200 dark:border-slate-800 grid grid-cols-2 gap-2">
                 <a
                   href="https://docs.google.com/document/d/16IA_B_VPAjWNEaUJ3oq2SvG7gOAkZznUMn6qKbL9O94/edit?tab=t.0"

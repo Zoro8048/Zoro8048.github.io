@@ -7,8 +7,10 @@ import {
   Briefcase,
   Cloud,
   MapPin,
+  Sparkles,
   Zap,
 } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const Hero: React.FC = () => {
@@ -94,6 +96,18 @@ const Hero: React.FC = () => {
                 <span>Resume &amp; Portfolio</span>
                 <ArrowUpRight className="w-4 h-4 text-blue-600 dark:text-blue-400" />
               </a>
+
+              <Link
+                href="/3d"
+                className="inline-flex items-center gap-2 px-4 py-3 rounded-xl border border-indigo-500/30 bg-gradient-to-r from-blue-600/10 via-indigo-600/10 to-violet-600/10 hover:from-blue-600/20 hover:to-violet-600/20 text-blue-600 dark:text-blue-400 font-semibold text-sm transition-all shadow-sm group"
+                title="Explore portfolio in an interactive Three.js 3D Universe"
+              >
+                <Sparkles className="w-4 h-4 text-indigo-500 group-hover:rotate-12 transition-transform" />
+                <span>3D Experience</span>
+                <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-blue-500/15 border border-blue-500/20 font-bold">
+                  3js
+                </span>
+              </Link>
 
               <a
                 href="#experience"

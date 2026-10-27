@@ -1,4 +1,5 @@
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, Sparkles } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const Footer: React.FC = () => {
@@ -50,6 +51,13 @@ const Footer: React.FC = () => {
             >
               Resume Doc
             </a>
+            <Link
+              href="/3d"
+              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-indigo-500/30 bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-500/20 transition-all font-semibold"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>3D Universe</span>
+            </Link>
             <a
               href="#hero"
               className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 hover:border-blue-500/50 transition-all"
